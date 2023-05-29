@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import styles from './header.module.css'
 
 const tarefas = [
   { id: '1', title: 'minha primeira tarefa' },
@@ -24,8 +25,8 @@ export default function App() {
   }, [])
 
   return (
-    <div>
-      <h1>Buscando Dados</h1>    
+      <div className="container">
+      <h1 className={styles.myH1}>Buscando Dados</h1>    
       <ol>
         {tarefas.map( (tarefa) => {
           return (
